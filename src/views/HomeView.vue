@@ -4,6 +4,7 @@ import axios from 'axios';
 import type { Product as ProductType  } from '@/interfaces/Product';
 import { ref } from 'vue';
 import ProductList from '@/components/ProductList.vue';
+import UserList from '@/components/UserList.vue';
 
 
 
