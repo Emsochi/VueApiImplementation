@@ -6,5 +6,6 @@ import { ref } from 'vue';
 
 let response = await axios.get<UserList>("https://dummyjson.com/users");
 
+let products = ref(response.data)
 
 </script>
