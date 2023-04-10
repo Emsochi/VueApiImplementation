@@ -1,4 +1,4 @@
-        export interface Root {
+   export interface Root {
         users: User[]
         total: number
         skip: number
