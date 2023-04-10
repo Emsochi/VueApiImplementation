@@ -22,6 +22,7 @@ const myTable = ["a", "b", "c"];
   <main>
     <Suspense>
       <ProductList/>
+      <UserList/>
     </Suspense>
   </main>
 </template>
