@@ -2,7 +2,7 @@
 import type { CartDTO } from '@/interfaces/CartDTO'; 
 import { ref } from 'vue';
 import axios from 'axios';
-import { ProductDTO } from '../interfaces/ProductDTO';
+import type { ProductDTO } from '../interfaces/ProductDTO';
 
 
 async function postCart() {
@@ -19,34 +19,40 @@ const newCart: CartDTO = {
 
 
 
-const created = await axios.post<Cart>("https://dummyjson.com/carts/add", newCart)
+const created = await axios.post<CartDTO>("https://dummyjson.com/carts/add", newCart)
 
 console.log(created.data)
 
 }
 
-const body = ref()
-const postId = ref()
-const userId = ref()
+const id = ref()
+const products = ref()
+const quantity = ref()
+const userId = ref ()
 
-</script>
+</script>s
 
 <template>
 
 
-Body:
-<input type="text" v-model="body" />
+ID:
+<input type="text" v-model="id" />
 
 <br>
-Post ID:
-<input type="text" v-model="postId">
+Products:
+<input type="text" v-model="products">
+
+<br>
+
+Quantity:
+<input type="text" v-model="quantity">
 
 <br>
 
 User ID:
-<input type="text" v-model="userId">
+<input type="text" v-model="userId"
 
-<button @click="postComment">Post Comment</button>
+<button @click="postCart">Add To Cart</button>
 
 
 
