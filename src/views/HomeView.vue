@@ -5,6 +5,9 @@ import type { Product as ProductType  } from '@/interfaces/Product';
 import { ref } from 'vue';
 import ProductList from '@/components/ProductList.vue';
 import UserList from '@/components/UserList.vue';
+import QuotesList from '@/components/QuotesList.vue';
+import PostComment from '@/components/PostComment.vue';
+import PostCart from '@/components/PostCart.vue'; 
 
 
 
@@ -20,9 +23,12 @@ const myTable = ["a", "b", "c"];
 
 <template>
   <main>
+
+    <PostComment/>
+    <PostCart/>
+
     <Suspense>
-      <ProductList/>
-      <UserList/>
+      <QuotesList/>
     </Suspense>
   </main>
 </template>
